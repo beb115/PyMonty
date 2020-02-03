@@ -1,8 +1,14 @@
 import random
 
 runs = 10000
-change = True
 totalWins = 0
+
+print("Would you like to Change?")
+x = input()
+if x == "y":
+    change = True
+else:
+    change = False
 
 def game(change):
     rand = random.randint(0, 2)
@@ -33,5 +39,7 @@ for i in range(runs):
 loss = runs - totalWins
 if change == True:
     print("You won " + str(totalWins) + " games and lost " + str(loss) + " changing")
+    input()
 else:
     print("You won " + str(totalWins) + " games and lost " + str(loss) + " not changing")
+    input()
